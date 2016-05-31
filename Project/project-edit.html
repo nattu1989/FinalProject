@@ -1,0 +1,62 @@
+<form form="projectForm" class="col-md-8 col-md-offset-2">
+    <legend class="m-b-30 m-t-30">Project Details</legend>
+
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label for="inputRef">Ref:</label>
+            <input type="text" class="form-control col-lg-10" id="inputRef" name="pRef" placeholder="ref"
+                   ng-model="editingProject.ref" disabled/>
+        </fieldset>
+    </div>
+
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label for="inputStatus">Status:</label>
+            <select id="inputStatus" class="form-control" name="pStatus" ng-model="editingProject.statusId" >
+                <option ng-repeat="status in projectStatuses" value="{{status.id}}">{{status.name}}</option>
+            </select>
+        </fieldset>
+    </div>
+    <div class="col-md-12">
+        <fieldset class="form-group">
+            <label for="inputDescription">Description:</label>
+            <input type="text" class="form-control col-lg-10" id="inputDescription" name="pDescription" placeholder="description"
+                   ng-model="editingProject.description" ng-disabled="authUser.roleId == 3" />
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label for="inputDetails">Details:</label>
+        <textarea class="form-control" id="inputDetails" rows="5" name="pDetails" placeholder="details"
+                  ng-model="editingProject.details" ng-readonly="authUser.roleId == 3"></textarea>
+        </fieldset>
+    </div>
+
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label for="inputClientName">Client Name:</label>
+            <input type="text" class="form-control" id="inputClientName" name="pClientName" placeholder="client name"
+                   ng-model="editingProject.clientName" ng-readonly="authUser.roleId == 3" />
+        </fieldset>
+    </div>
+
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label for="selectAssignedTo">Assigned To:</label>
+            <select id="selectAssignedTo" class="form-control" name="pAssignedTo" ng-model="editingProject.assignedTo"
+                    ng-readonly="authUser.roleId == 3">
+                <option ng-repeat="user in assignUsersList" value="{{user.username}}">{{user.username}} - {{getRoleName(user.roleId)}}</option>
+            </select>
+        </fieldset>
+    </div>
+
+    <div class="col-md-12">
+        <fieldset class="form-group">
+            <label for="inputNotes">Notes:</label>
+            <textarea class="form-control" id="inputNotes" rows="5" ng-model="editingProject.notes"  placeholder="notes"></textarea>
+        </fieldset>
+    </div>
+
+    <div class="clearfix "></div>
+    <a href="#projects" class="btn btn-primary" title="Back to list">Back to list</a>
+    <button type="submit" class="btn btn-primary pull-right" ng-click="updateProject()">Update</button>
+</form>

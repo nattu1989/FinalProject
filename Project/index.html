@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="job-management-module">
+    <head>
+        <meta charset="UTF-8">
+        <title>Job Management</title>
+        <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <link type="text/css" rel="stylesheet" href="/css/main.css" />
+        <link type="text/css" rel="stylesheet" href="/css/login.css" />
+    </head>
+
+    <body ng-controller="MainCtrl">
+
+    <div class="container">
+        <header ng-show="authUser">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#project-list"><i class="fa fa-file-text"></i> Projects</a></li>
+                        <li><a href="#user-list"><i class="fa fa-user"></i> Users</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <p class="navbar-text">Logged in as <b>{{authUser && authUser.username}} - {{authUser && getRoleName(authUser.roleId)}}</b></p>
+                        <button class="btn btn-primary btn-logout" ng-click="logout()">Log Out</button>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div id="main">
+            <ng-view></ng-view>
+        </div>
+
+        <footer ng-show="authUser">
+            <span>&copy; 2016 - Job Management</span>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="//localhost:35729/livereload.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.5.5/angular-messages.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/authentication/auth.service.js"></script>
+    <script type="text/javascript" src="/js/users/users.constants.js"></script>
+    <script type="text/javascript" src="/js/users/users.service.js"></script>
+    <script type="text/javascript" src="/js/users/users.controller.js"></script>
+    <script type="text/javascript" src="/js/projects/projects.constants.js"></script>
+    <script type="text/javascript" src="/js/projects/projects.service.js"></script>
+    <script type="text/javascript" src="/js/projects/projects.controller.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+
+<div class="page-header">
+    <h1 class="text-center">Users List</h1>
+</div>
+
+<table class="table table-hover">
+    <thead>
+    <tr class="first-row">
+        <th>Name</th>
+        <th>Username</th>
+        <th>Role</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in userList" ng-show="user.roleId > 1">
+        <td>{{user.firstName + " "+ user.lastName}}</td>
+        <td>{{user.username}}</td>
+        <td>{{getRoleName(user.roleId)}}</td>
+
+        <td width="10px"><a class="action pull-right btn-xs glyphicon glyphicon-edit" title="Edit User"
+                            ng-click="editUser(user.id)" ng-show="authUser.roleId <= user.roleId && canEditUser(user)"></a></td>
+
+        <td width="10px"><a class="action pull-right btn-xs glyphicon glyphicon-trash" title="Delete User"
+                            ng-click="deleteUser(user.id)" ng-show="(authUser.roleId == 1 && user.roleId != 1)"></a></td>
+    </tr>
+    </tbody>
+</table>
+
+<a class="pull-right btn btn-primary m-t-30" title="Create New User" ng-show="authUser.roleId < 3" ng-click="createUser()">Create New User</a>

@@ -1,0 +1,98 @@
+{
+  "projects": [{
+      "id": 1,
+      "ref": "1001",
+      "statusId": "1",
+      "description": "PROJ1001",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo erat, blandit eu semper in, porta non ex. Fusce cursus nisl id lacinia laoreet.",
+      "clientName": "Hillside Bazaar",
+      "createdBy": "pcal",
+      "assignedTo":"imus",
+      "notes":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo erat, blandit eu semper in, porta non ex. Fusce cursus nisl id lacinia laoreet."
+    }, {
+      "id": 2,
+      "ref": "1002",
+      "statusId": "2",
+      "description": "PROJ1002",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo erat, blandit eu semper in, porta non ex. Fusce cursus nisl id lacinia laoreet.",
+      "clientName": "Maypole",
+      "createdBy": "pcal",
+      "assignedTo":"staff",
+      "notes":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo erat, blandit eu semper in, porta non ex. Fusce cursus nisl id lacinia laoreet."
+    }, {
+      "id": 3,
+      "ref": "1003",
+      "statusId": "3",
+      "description": "PROJ1003",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo erat, blandit eu semper in, porta non ex. Fusce cursus nisl id lacinia laoreet.",
+      "clientName": "The Convenience Shop",
+      "createdBy": "manager",
+      "assignedTo":"staff",
+      "notes":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo erat, blandit eu semper in, porta non ex. Fusce cursus nisl id lacinia laoreet."
+    }],
+
+  "users": [{
+    "id": 1,
+    "firstName": "admin",
+    "lastName": "",
+    "username": "admin",
+    "password": "admin",
+    "roleId": "1"
+  }, {
+    "id": 2,
+    "firstName": "manager",
+    "lastName": "",
+    "username": "manager",
+    "password": "manager",
+    "roleId": "2"
+  },{
+    "id": 3,
+    "firstName": "staff",
+    "lastName": "",
+    "username": "staff",
+    "password": "staff",
+    "roleId": "3"
+  },{
+    "id": 4,
+    "firstName": "Peter",
+    "lastName": "Calleja",
+    "username": "pcal",
+    "password": "pcal",
+    "roleId": "2"
+  }, {
+    "id": 5,
+    "firstName": "Jessica",
+    "lastName": "Micallef",
+    "username": "jmic",
+    "password": "jmic",
+    "roleId": "2"
+  }, {
+    "id": 6,
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "jdoe",
+    "password": "jdoe",
+    "roleId": "3"
+  }, {
+    "id": 7,
+    "firstName": "Chris",
+    "lastName": "Bugeja",
+    "username": "cbug",
+    "password": "cbug",
+    "roleId": "3"
+  }, {
+    "id": 8,
+    "firstName": "Keith",
+    "lastName": "Borg",
+    "username": "kbor",
+    "password": "kbor",
+    "roleId": "3"
+  }, {
+    "id": 9,
+    "firstName": "Ilona",
+    "lastName": "Muscat",
+    "username": "imus",
+    "password": "imus",
+    "roleId": "3"
+  }]
+}

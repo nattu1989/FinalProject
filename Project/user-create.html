@@ -1,0 +1,42 @@
+    <form name="userForm" class="col-md-8 col-md-offset-2" >
+        <legend class="m-b-30 m-t-30">User Details</legend>
+
+        <div class="col-md-6">
+            <fieldset class="form-group">
+                <label for="inputFirstName">First Name:</label>
+                <input type="text" class="form-control" id="inputFirstName" name="uFirstName" placeholder="first name"
+                       ng-model="editingUser.firstName">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="inputLastName">Last Name:</label>
+                <input type="text" class="form-control" id="inputLastName" name="uLastName" placeholder="last name"
+                       ng-model="editingUser.lastName">
+            </fieldset>
+        </div>
+
+        <div class="col-md-6">
+            <fieldset class="form-group">
+                <label for="inputUsername">Username:</label>
+                <input type="text" class="form-control" id="inputUsername" name="uUsername" placeholder="username"
+                       ng-model="editingUser.username">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="inputPassword">Password:</label>
+                <input type="password" class="form-control" id="inputPassword" name="uPassword" placeholder="password"
+                       ng-model="editingUser.password">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="selectRole">Role:</label>
+                <select id="selectRole" class="form-control" name="uRole" ng-model="editingUser.roleId">
+                    <option ng-repeat="role in rolesList " value="{{role.roleId}}">{{role.name}}</option>
+                </select>
+            </fieldset>
+        </div>
+
+        <div class="clearfix "></div>
+        <a href="#user-list" class="btn btn-primary" title="Back to list">Back to list</a>
+        <button type="submit" class="btn btn-primary pull-right" ng-click="createUser()">Create</button>
+    </form>

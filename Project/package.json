@@ -1,0 +1,19 @@
+{
+  "name": "FinalProject",
+  "version": "1.0.0",
+  "description": "Final Project - Job Management",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nattu1989/FinalProject.git"
+  },
+  "homepage": "https://github.com/nattu1989/FinalProject.git#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
