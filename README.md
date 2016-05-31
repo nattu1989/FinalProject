@@ -5,12 +5,9 @@ NOTE: An internet connection is required!
 
 Persistence of data used: JSON server
 
-You may use the following credentials as to login with different role:
+You may use the following credentials as to login with different roles:
   
-  Username    Password
-  admin       admin
-  manager     manager
-  staff       staff
+  u: admin p: admin, u: manager p: manager, u: staff, p: staff
   
 These users will have the respective role assigned to them.
 
