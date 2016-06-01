@@ -24,9 +24,9 @@
         return service;
 
         function GetAll() {
-            if(allProjects || allProjects.length === 0) {
-                var dfr = $q.defer();
+            var dfr = $q.defer();
 
+            if(allProjects || allProjects.length === 0) {
                 $http.get(PROJECTS_ENDPOINT).then(
                     function (projects) {
                         allProjects = projects.data;
@@ -36,12 +36,11 @@
                         dfr.reject({message: 'Error getting all projects'});
                     }
                 );
-
-                return dfr.promise;
             }
             else{
-                return allProjects;
+                dfr.resolve(allProjects);
             }
+            return dfr.promise;
         }
 
         function GetById(id) {
