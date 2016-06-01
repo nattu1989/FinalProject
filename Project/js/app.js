@@ -10,8 +10,7 @@
             controller:'ProjectListCtrl'
         })
         .when('/login', {
-            templateUrl: 'login.html',
-            controller:'MainCtrl'
+            templateUrl: 'login.html'
         }).when('/project-list', {
             templateUrl: 'project-list.html',
             controller:'ProjectListCtrl'
