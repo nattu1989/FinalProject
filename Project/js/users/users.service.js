@@ -23,19 +23,24 @@
 
         return service;
 
-        function GetAll() {
+       function GetAll() {
 
             var dfr = $q.defer();
 
-            $http.get(USERS_ENDPOINT).then(
-                function(users){
-                    allUsers = users.data;
-                    dfr.resolve(users.data);
-                },
-                function(){
-                    dfr.reject({ message: 'Error getting all users' });
-                }
-            );
+            if(allUsers || allUsers.length === 0) {
+                $http.get(USERS_ENDPOINT).then(
+                    function (users) {
+                        allUsers = users.data;
+                        dfr.resolve(users.data);
+                    },
+                    function () {
+                        dfr.reject({message: 'Error getting all users'});
+                    }
+                );
+            }
+            else{
+                dfr.resolve(allUsers);
+            }
 
             return dfr.promise;
         }
